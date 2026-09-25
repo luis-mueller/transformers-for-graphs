@@ -1,0 +1,2 @@
+#!/bin/bash
+torchrun --standalone --nproc_per_node=2 train.py --path ./results/lwl-leq32K-pcq.csv --root ./ --model LWL --model_size 24M --learning_rate 0.0002 --ffn_dropout 0.1 --task pcq --seed 1 --pe lpe --lpe_num_eigvals 96 --transforms lwl --norm_first --activation gelu --test_during_training --num_steps 32768

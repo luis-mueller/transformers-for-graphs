@@ -1,0 +1,2 @@
+#!/bin/bash
+torchrun --standalone --nproc_per_node=2 train.py --path ./results/gdt-geq64K-flow.csv --root ./ --model GDT --model_size 50M --learning_rate 0.0002 --ffn_dropout 0.0 --task flow --seed 5 --pe lpe --lpe_num_eigvals 96 --norm_first --activation gelu --test_during_training --compile --find_unused_parameters --num_steps 524288

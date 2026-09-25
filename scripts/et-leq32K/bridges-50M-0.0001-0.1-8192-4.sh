@@ -1,0 +1,2 @@
+#!/bin/bash
+torchrun --standalone --nproc_per_node=2 train.py --path ./results/et-leq32K-bridges.csv --root ./ --model ET --model_size 50M --learning_rate 0.0001 --ffn_dropout 0.1 --task bridges --seed 4 --pooling sum --norm_first --activation gelu --test_during_training --compile --find_unused_parameters --num_steps 8192

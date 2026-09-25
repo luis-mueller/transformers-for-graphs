@@ -1,0 +1,2 @@
+#!/bin/bash
+torchrun --standalone --nproc_per_node=2 train.py --path ./results/et-leq32K-flow.csv --root ./ --model ET --model_size 50M --learning_rate 0.0001 --ffn_dropout 0.0 --task flow --seed 3 --pooling sum --norm_first --activation gelu --test_during_training --compile --num_steps 32768
